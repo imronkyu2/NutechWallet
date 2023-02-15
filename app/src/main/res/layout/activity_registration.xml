@@ -68,7 +68,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_loop="true"
-        app:lottie_speed="150"
         android:visibility="gone"
-        app:lottie_rawRes="@raw/animation_loading" />
+        app:lottie_rawRes="@raw/loading_animation" />
 </androidx.constraintlayout.widget.ConstraintLayout>

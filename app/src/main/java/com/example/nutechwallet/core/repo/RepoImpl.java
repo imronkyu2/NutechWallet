@@ -109,7 +109,7 @@ public class RepoImpl implements Repo {
     @Override
     public void doUpdateProfile(UpdateProfileBody updateProfileBody, PostCallback callback) {
         Call<NutechBaseResponse<UpdateProfileResponse>> responseCall = apiService.doUpdateProfile(updateProfileBody,
-                SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
+                "Bearer "+SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
         responseCall.enqueue(new Callback<NutechBaseResponse<UpdateProfileResponse>>() {
             @Override
             public void onResponse(@NonNull Call<NutechBaseResponse<UpdateProfileResponse>> call,
@@ -184,7 +184,7 @@ public class RepoImpl implements Repo {
     @Override
     public void doTopUp(TopUpAndTransferBody topup, PostCallback callback) {
         Call<NutechBaseResponse> responseCall = apiService.doTopUp(topup,
-                SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
+                "Bearer "+SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
         responseCall.enqueue(new Callback<NutechBaseResponse>() {
             @Override
             public void onResponse(@NonNull Call<NutechBaseResponse> call, @NonNull Response<NutechBaseResponse> response) {
@@ -219,7 +219,7 @@ public class RepoImpl implements Repo {
     @Override
     public void doTransfer(TopUpAndTransferBody transfer, PostCallback callback) {
         Call<NutechBaseResponse> responseCall = apiService.doTransfer(transfer,
-                SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
+                "Bearer "+SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
         responseCall.enqueue(new Callback<NutechBaseResponse>() {
             @Override
             public void onResponse(@NonNull Call<NutechBaseResponse> call, @NonNull Response<NutechBaseResponse> response) {
@@ -252,9 +252,9 @@ public class RepoImpl implements Repo {
     }
 
     @Override
-    public void doGetTransactionHistory(LoadCallback<TransactionHistoryResponse> callback) {
+    public void doGetTransactionHistory(LoadCallback<ListBaseResponse<TransactionHistoryResponse>> callback) {
         Call<ListBaseResponse<TransactionHistoryResponse>> responseCall = apiService.doGetTransactionHistory(
-                SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
+                "Bearer "+SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
         responseCall.enqueue(new Callback<ListBaseResponse<TransactionHistoryResponse>>() {
             @Override
             public void onResponse(@NonNull Call<ListBaseResponse<TransactionHistoryResponse>> call,
@@ -289,9 +289,9 @@ public class RepoImpl implements Repo {
     }
 
     @Override
-    public void doGetBalance(LoadCallback<UserResponse> callback) {
+    public void doGetBalance(LoadCallback<BalanceResponse> callback) {
         Call<NutechBaseResponse<BalanceResponse>> responseCall = apiService.doGetBalance(
-                SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
+                "Bearer "+SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
         responseCall.enqueue(new Callback<NutechBaseResponse<BalanceResponse>>() {
             @Override
             public void onResponse(@NonNull Call<NutechBaseResponse<BalanceResponse>> call,

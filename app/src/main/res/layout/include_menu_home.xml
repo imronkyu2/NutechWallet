@@ -12,8 +12,8 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_marginEnd="10dp"
-        android:padding="15dp"
         android:background="@drawable/background_radius_boarder_360dp"
+        android:padding="15dp"
         app:srcCompat="@drawable/ic_mobile_payment"
         tools:ignore="ContentDescription" />
 
@@ -35,7 +35,6 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerVertical="true"
-        android:textStyle="bold"
         android:text="@string/transaction_history"
         android:textColor="@color/orange_FE7415"
         android:textSize="16sp" />

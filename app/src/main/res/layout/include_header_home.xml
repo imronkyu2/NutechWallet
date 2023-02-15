@@ -16,14 +16,17 @@
         android:textSize="12sp" />
 
     <TextView
-        android:id="@+id/tv_subtitle"
-        android:layout_below="@+id/tv_title"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_userName"
+        android:layout_toStartOf="@+id/detileUser"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:text="User Name"
+        android:layout_below="@+id/tv_title"
+        android:layout_marginTop="5dp"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:layout_marginTop="5dp"/>
+        android:maxLines="1"
+        android:ellipsize="end"
+        tools:text="User Name" />
 
     <TextView
         android:id="@+id/detileUser"

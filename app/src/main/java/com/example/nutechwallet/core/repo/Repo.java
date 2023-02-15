@@ -1,5 +1,7 @@
 package com.example.nutechwallet.core.repo;
 
+import com.example.nutechwallet.model.ListBaseResponse;
+import com.example.nutechwallet.model.balance.BalanceResponse;
 import com.example.nutechwallet.model.history.TransactionHistoryResponse;
 import com.example.nutechwallet.model.login.LoginBody;
 import com.example.nutechwallet.model.register.UserBody;
@@ -23,7 +25,7 @@ public interface Repo {
 
     void doTransfer(TopUpAndTransferBody transfer, PostCallback callback);
 
-    void doGetTransactionHistory(LoadCallback<TransactionHistoryResponse> callback);
+    void doGetTransactionHistory(LoadCallback<ListBaseResponse<TransactionHistoryResponse>> callback);
 
-    void doGetBalance(LoadCallback<UserResponse> callback);
+    void doGetBalance(LoadCallback<BalanceResponse> callback);
 }

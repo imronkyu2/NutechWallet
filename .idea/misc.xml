@@ -3,11 +3,18 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/drawable/background_radius_boarder_360dp.xml" value="0.2155" />
+        <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/drawable/ic_mobile_payment.xml" value="0.2155" />
+        <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/activity_registration.xml" value="0.25" />
         <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/activity_splash.xml" value="0.25" />
+        <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/adapter_transaction_history.xml" value="0.25" />
+        <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/include_card_home.xml" value="0.25" />
+        <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/include_header_home.xml" value="0.25" />
         <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/include_input_password_register.xml" value="0.25" />
         <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/include_input_profile_register.xml" value="0.25" />
+        <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWallet/app/src/main/res/layout/include_menu_home.xml" value="0.25" />
         <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWalletNgebug/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2155" />
         <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWalletNgebug/app/src/main/res/drawable/background_radius_10dp.xml" value="0.2155" />
         <entry key="..\:/Users/imron/AndroidStudioProjects/NutechWalletNgebug/app/src/main/res/drawable/background_radius_15dp.xml" value="0.2155" />

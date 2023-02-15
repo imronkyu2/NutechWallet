@@ -51,5 +51,7 @@ dependencies {
     implementation 'com.fasterxml.jackson.core:jackson-annotations:2.12.5'
     implementation 'com.fasterxml.jackson.core:jackson-databind:2.12.5'
 
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
     implementation "com.airbnb.android:lottie:5.2.0"
 }
