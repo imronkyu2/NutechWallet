@@ -80,4 +80,14 @@
         android:background="@color/white_F3F3F3"
         android:src="@drawable/ic_nutect"
         tools:ignore="ContentDescription" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animateView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_centerInParent="true"
+        app:lottie_loop="true"
+        android:visibility="gone"
+        app:lottie_speed="150"
+        app:lottie_rawRes="@raw/animation_loading" />
 </RelativeLayout>
