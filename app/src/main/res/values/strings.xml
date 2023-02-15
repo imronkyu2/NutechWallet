@@ -25,4 +25,9 @@
     <string name="first_name_not_may_kosong">Nama depan tidak boleh kosong</string>
     <string name="passwords_dont_match">Password dan Konfirmasi kata sandi tidak sama</string>
     <string name="email_and_password_have_not_been_filled_in">Email dan Password belum di isi</string>
+    <string name="topup_nutech"><font color="#FFFFFFFF">Top Up Saldo </font> <font color="#FE7415">Nutech </font> <font color="#FFFFFFFF">Wallet</font></string>
+    <string name="transfer_nutech"><font color="#FFFFFFFF">Transfer Saldo </font> <font color="#FE7415">Nutech </font> <font color="#FFFFFFFF">Wallet</font></string>
+    <string name="nominal_content">Isi nominal yang anda inginkan</string>
+    <string name="rp">Rp.</string>
+    <string name="transaction">Transaksi</string>
 </resources>

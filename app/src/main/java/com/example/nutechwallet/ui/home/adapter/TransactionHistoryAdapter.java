@@ -40,15 +40,17 @@ public class TransactionHistoryAdapter extends RecyclerView.Adapter<TransactionH
             holder.viewBinding.tvSubtitle.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_marking_topup, 0, 0, 0);
             holder.viewBinding.imageStatus.setImageResource(R.drawable.ic_grow_up);
             holder.viewBinding.tvTotal.setTextColor(context.getColor(R.color.green_60CF97));
+            holder.viewBinding.tvTotal.setText("+"+Const.formatRupiah((double) data.getAmount()));
         }else {
             holder.viewBinding.tvSubtitle.setText("TRANSFER");
             holder.viewBinding.tvSubtitle.setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_marking_transfer, 0, 0, 0);
             holder.viewBinding.imageStatus.setImageResource(R.drawable.ic_grow_down);
             holder.viewBinding.tvTotal.setTextColor(context.getColor(R.color.orange_FB6365));
+            holder.viewBinding.tvTotal.setText(Const.formatRupiah((double) data.getAmount()));
+            holder.viewBinding.tvTotal.setText("-"+Const.formatRupiah((double) data.getAmount()));
         }
-
         holder.viewBinding.tvDate.setText(data.getTransactionTime());
-        holder.viewBinding.tvTotal.setText(Const.formatRupiah((double) data.getAmount()));
+
     }
 
     @Override

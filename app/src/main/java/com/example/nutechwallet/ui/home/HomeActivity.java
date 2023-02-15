@@ -1,12 +1,13 @@
 package com.example.nutechwallet.ui.home;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import com.example.nutechwallet.core.singleton.SingletonLikeApp;
 import com.example.nutechwallet.databinding.ActivityHomeBinding;
@@ -19,8 +20,7 @@ import com.example.nutechwallet.model.login.LoginResponse;
 import com.example.nutechwallet.ui.home.adapter.TransactionHistoryAdapter;
 import com.example.nutechwallet.ui.home.contract.HomePresenterContract;
 import com.example.nutechwallet.ui.home.contract.HomeViewContract;
-import com.example.nutechwallet.ui.login.LoginActivity;
-import com.example.nutechwallet.ui.login.LoginPresenter;
+import com.example.nutechwallet.ui.toup.TopUpAndTransferActivity;
 import com.example.nutechwallet.util.Const;
 import com.example.nutechwallet.util.Injection;
 
@@ -41,7 +41,26 @@ public class HomeActivity extends AppCompatActivity implements HomeViewContract 
 
         new HomePresenter(Injection.provideRepository(getApplicationContext()), HomeActivity.this);
         initialization();
+        ActionButton();
         headerLayout();
+    }
+
+    private void ActionButton() {
+        menuBinding.iconTransfer.setOnClickListener(v->{
+            startActivityTopUpAndTransfer(false);
+        });
+        menuBinding.tvTransfer.setOnClickListener(v->{
+            startActivityTopUpAndTransfer(false);
+        });
+        cardBinding.buttonTopUp.setOnClickListener(v->{
+            startActivityTopUpAndTransfer(Const.Transaction.DO_TOPUP);
+        });
+    }
+
+    private void startActivityTopUpAndTransfer(boolean doTopup) {
+        Intent intent = new Intent(HomeActivity.this, TopUpAndTransferActivity.class);
+        intent.putExtra("TopUp", doTopup);
+        startActivity(intent);
     }
 
     @Override

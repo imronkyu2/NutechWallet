@@ -18,6 +18,7 @@ public class Const {
     public static final class Transaction{
         public static final String TRANSFER = "transfer";
         public static final String TOPUP = "topup";
+        public static final boolean DO_TOPUP = true;
 
     }
 
