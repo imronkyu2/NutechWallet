@@ -13,12 +13,14 @@ import com.example.nutechwallet.model.toupandtransfer.TopUpAndTransferBody;
 import com.example.nutechwallet.ui.home.HomeActivity;
 import com.example.nutechwallet.ui.toup.contract.TopUpAndTransferPresenterContract;
 import com.example.nutechwallet.ui.toup.contract.TopUpAndTransferViewContract;
+import com.example.nutechwallet.util.Const;
 import com.example.nutechwallet.util.Injection;
 
 public class TopUpAndTransferActivity extends AppCompatActivity implements TopUpAndTransferViewContract {
     private ActivityTopUpAndTransferBinding binding;
     private TopUpAndTransferPresenterContract presenter;
     private boolean topupStatus;
+    private int saldo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,19 +32,31 @@ public class TopUpAndTransferActivity extends AppCompatActivity implements TopUp
                 Injection.provideRepository(getApplicationContext()),
                 TopUpAndTransferActivity.this);
 
-        topupStatus =getIntent().getExtras().getBoolean("TopUp");
+        topupStatus = getIntent().getExtras().getBoolean("TopUp");
+        saldo = getIntent().getExtras().getInt("Saldo");
 
+        showContentActivity();
+        actionButton();
+
+
+    }
+
+
+    private void showContentActivity() {
+        binding.balanceTV.setText(Const.formatRupiah((double) saldo));
         if (topupStatus) {
             binding.tvTitle.setText(getText(R.string.topup_nutech));
         }else {
             binding.tvTitle.setText(getText(R.string.transfer_nutech));
         }
+    }
 
+    private void actionButton() {
         binding.tvTitle.setOnClickListener(v ->{
             backToHomeActivity();
         });
 
-        binding.btnRegister.setOnClickListener(v->{
+        binding.btnTransaction.setOnClickListener(v->{
             String total = binding.etTotal.getText().toString();
             if (total.isEmpty()){
                 Toast.makeText(TopUpAndTransferActivity.this, "Anda belum memasukkan nominal", Toast.LENGTH_LONG).show();
@@ -52,11 +66,15 @@ public class TopUpAndTransferActivity extends AppCompatActivity implements TopUp
                 if (topupStatus) {
                     presenter.doTopUp(body);
                 } else {
-                    presenter.doTransfer(body);
+                    boolean request = saldo > Integer.parseInt(total);
+                    if (request) {
+                        presenter.doTransfer(body);
+                    }else {
+                        Toast.makeText(TopUpAndTransferActivity.this, "Maaf saldo anda tidak mencukupi untuk melakukan transfer", Toast.LENGTH_LONG).show();
+                    }
                 }
             }
         });
-
     }
 
     @Override

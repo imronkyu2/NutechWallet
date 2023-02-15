@@ -32,6 +32,7 @@ public class HomeActivity extends AppCompatActivity implements HomeViewContract 
     private IncludeCardHomeBinding cardBinding;
     private IncludeMenuHomeBinding menuBinding;
     private HomePresenterContract presenter;
+    private int saldo = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +61,7 @@ public class HomeActivity extends AppCompatActivity implements HomeViewContract 
     private void startActivityTopUpAndTransfer(boolean doTopup) {
         Intent intent = new Intent(HomeActivity.this, TopUpAndTransferActivity.class);
         intent.putExtra("TopUp", doTopup);
+        intent.putExtra("Saldo", saldo);
         startActivity(intent);
     }
 
@@ -114,6 +116,7 @@ public class HomeActivity extends AppCompatActivity implements HomeViewContract 
 
     @Override
     public void doGetBalanceSuccessfully(BalanceResponse var1) {
+        saldo = var1.getBalance();
         cardBinding.balanceTV.setText(Const.formatRupiah((double) var1.getBalance()));
     }
 

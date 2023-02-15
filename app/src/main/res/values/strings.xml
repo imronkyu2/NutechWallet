@@ -15,6 +15,7 @@
     <string name="register">Daftar</string>
     <string name="i_agreed_the_terms_and_conditions"><font color="#FFFFFFFF">Saya menyetujui </font><font color="#FE7415">Syarat &amp; Ketentuan</font></string>
     <string name="total_balance"><font color="#FE7415">Total </font><font color="#FFFFFFFF">Saldo </font></string>
+    <string name="current_balance"><font color="#FFFFFFFF">Saldo </font><font color="#FE7415">Anda </font><font color="#FFFFFFFF">Sekang </font></string>
     <string name="top_up_balance">Top Up Saldo</string>
     <string name="detail_user">Detail User</string>
     <string name="transfer">Transfer</string>
