@@ -12,6 +12,8 @@ import com.example.nutechwallet.model.login.LoginBody;
 import com.example.nutechwallet.model.login.LoginResponse;
 import com.example.nutechwallet.model.register.UserBody;
 import com.example.nutechwallet.model.register.UserResponse;
+import com.example.nutechwallet.model.updateprofile.UpdateProfileBody;
+import com.example.nutechwallet.model.updateprofile.UpdateProfileResponse;
 import com.example.nutechwallet.util.Const;
 import com.example.nutechwallet.util.mvp.PostCallback;
 
@@ -91,6 +93,41 @@ public class RepoImpl implements Repo {
 
             @Override
             public void onFailure(@NonNull Call<BaseResponse<LoginResponse>> call,
+                                  @NonNull Throwable t) {
+                assert callback != null;
+                callback.onErrorRequest(t);
+            }
+        });
+    }
+
+    @Override
+    public void doUpdateProfile(UpdateProfileBody updateProfileBody, PostCallback callback) {
+        Call<BaseResponse<UpdateProfileResponse>> responseCall = apiService.doUpdateProfile(updateProfileBody);
+        responseCall.enqueue(new Callback<BaseResponse<UpdateProfileResponse>>() {
+            @Override
+            public void onResponse(@NonNull Call<BaseResponse<UpdateProfileResponse>> call,
+                                   @NonNull Response<BaseResponse<UpdateProfileResponse>> response) {
+                if (response.isSuccessful()) {
+                    try {
+                        BaseResponse<UpdateProfileResponse> wrapper = response.body();
+                        assert wrapper != null;
+                        if (wrapper.getStatus() == Const.ResponseCodes.SUCCESS) {
+                            callback.onEntityPosted(wrapper.getData());
+                        } else {
+                            callback.onErrorRequest(new Exception(wrapper.getMessage()));
+                        }
+                    } catch (RuntimeException ex) {
+                        Log.e("RuntimeException", ex.getMessage());
+                        callback.onErrorRequest(new Exception(ex.getMessage()));
+                    }
+                } else {
+                    callback.onErrorRequest(new Exception(response.message()));
+                }
+
+            }
+
+            @Override
+            public void onFailure(@NonNull Call<BaseResponse<UpdateProfileResponse>> call,
                                   @NonNull Throwable t) {
                 assert callback != null;
                 callback.onErrorRequest(t);
