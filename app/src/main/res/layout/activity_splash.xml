@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_262238"
+    tools:context=".ui.splash.NewtechSplashActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animateView"
+        android:layout_width="wrap_content"
+        android:layout_height="300dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/animation_splash"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nutech"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_marginTop="-40dp"
+        android:layout_centerInParent="true"
+        android:layout_below="@+id/animateView"/>
+
+</RelativeLayout>

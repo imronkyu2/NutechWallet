@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black_1E1B29"
+    android:paddingHorizontal="20dp"
+    tools:context=".ui.login.LoginActivity">
+
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_subtitle"
+        android:layout_marginBottom="10dp"
+        android:text="@string/nutech"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:text="@string/login_to_application_nutech_wallet"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:layout_above="@+id/et_email"/>
+
+    <EditText
+        android:id="@+id/et_email"
+        android:layout_above="@+id/et_password"
+        style="@style/customEditText"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="10dp"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/et_password"
+        style="@style/customEditText"
+        android:hint="@string/password"
+        android:layout_marginTop="15dp"
+        android:inputType="textPassword"
+        android:layout_centerInParent="true"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/warningPasswordTV"
+        android:layout_below="@+id/et_password"
+        style="@style/errorTV"
+        android:text="@string/password_not_allowed"
+        android:visibility="visible"
+        tools:ignore="InefficientWeight" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_login"
+        android:layout_below="@+id/et_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_custom"
+        android:text="@string/login"
+        android:textSize="17sp"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white" />
+
+    <TextView
+        android:id="@+id/registerTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btn_login"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="180dp"
+        android:text="@string/dont_have_an_account_yet_register"
+        android:textAlignment="textEnd"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        app:drawableEndCompat="@drawable/ic_arrow_right" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:background="@color/white_F3F3F3"
+        android:src="@drawable/ic_nutect"
+        tools:ignore="ContentDescription" />
+</RelativeLayout>

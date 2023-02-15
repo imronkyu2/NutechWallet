@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingHorizontal="20dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="20dp"
+    android:background="@drawable/background_radius_10dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_subtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/contents_data_personal_anda"
+        android:textColor="@color/white"
+        android:textSize="17sp"/>
+
+    <EditText
+        android:id="@+id/et_firts_name"
+        style="@style/customEditText"
+        android:hint="@string/firts_name"
+        android:inputType="textCapSentences"
+        android:layout_marginTop="20dp"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/warningFirstNameTv"
+        style="@style/errorTV"
+        android:text="@string/first_name_not_may_kosong"
+        android:visibility="gone"
+        tools:ignore="InefficientWeight" />
+
+    <EditText
+        android:id="@+id/et_last_name"
+        style="@style/customEditText"
+        android:hint="@string/last_name"
+        android:inputType="textCapSentences"
+        android:layout_marginTop="15dp"
+        tools:ignore="Autofill" />
+
+    <EditText
+        android:id="@+id/et_email"
+        style="@style/customEditText"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="15dp"
+        tools:ignore="Autofill" />
+
+    <TextView
+        android:id="@+id/warningEmailTV"
+        style="@style/errorTV"
+        android:text="@string/email_not_may_kosong"
+        android:visibility="gone"
+        tools:ignore="InefficientWeight" />
+
+</LinearLayout>

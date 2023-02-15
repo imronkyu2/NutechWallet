@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Nutech Wallet</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="nutech"><font color="#FE7415">Nutech</font> <font color="#FFFFFFFF">Wallet</font></string>
+    <string name="register_nutech"><font color="#FFFFFFFF">Pendaftaran akun </font> <font color="#FE7415">Nutech </font> <font color="#FFFFFFFF">Wallet</font></string>
+    <string name="login_to_application_nutech_wallet"><font color="#FFFFFFFF">Masuk ke Aplikasi </font><font color="#FE7415">Nutech </font><font color="#FFFFFFFF">Wallet</font></string>
+    <string name="dont_have_an_account_yet_register"><font color="#FFFFFFFF">Belum punya akun? </font><font color="#FE7415">Daftar</font></string>
+    <string name="contents_data_personal_anda">Isi data pribadi Anda</string>
+    <string name="firts_name">Nama depan</string>
+    <string name="last_name">Nama belakang</string>
+    <string name="convirm_password">Konfirmasi kata sandi</string>
+    <string name="setting_password">Atur Kata Sandi</string>
+    <string name="register">Daftar</string>
+    <string name="i_agreed_the_terms_and_conditions"><font color="#FFFFFFFF">Saya menyetujui </font><font color="#FE7415">Syarat &amp; Ketentuan</font></string>
+    <string name="total_balance"><font color="#FE7415">Total </font><font color="#FFFFFFFF">Saldo </font></string>
+    <string name="top_up_balance">Top Up Saldo</string>
+    <string name="detail_user">Detail User</string>
+    <string name="transfer">Transfer</string>
+    <string name="transaction_history"><font color="#FE7415">Riwayat </font><font color="#FFFFFFFF">Transaksi</font></string>
+    <string name="password_not_allowed">Password tidak boleh kosong</string>
+    <string name="confirmation_password_not_may_kosong">Konfirmasi kata sandi tidak boleh kosong</string>
+    <string name="email_not_may_kosong">Email tidak boleh kosong</string>
+    <string name="first_name_not_may_kosong">Nama depan tidak boleh kosong</string>
+    <string name="passwords_dont_match">Password dan Konfirmasi kata sandi tidak sama</string>
+</resources>
