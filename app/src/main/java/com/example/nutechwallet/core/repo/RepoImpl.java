@@ -7,6 +7,7 @@ import androidx.annotation.NonNull;
 
 import com.example.nutechwallet.core.networking.ApiService;
 import com.example.nutechwallet.core.networking.RetrofitHttpsCall;
+import com.example.nutechwallet.core.singleton.SingletonLikeApp;
 import com.example.nutechwallet.model.BaseResponse;
 import com.example.nutechwallet.model.login.LoginBody;
 import com.example.nutechwallet.model.login.LoginResponse;
@@ -102,7 +103,8 @@ public class RepoImpl implements Repo {
 
     @Override
     public void doUpdateProfile(UpdateProfileBody updateProfileBody, PostCallback callback) {
-        Call<BaseResponse<UpdateProfileResponse>> responseCall = apiService.doUpdateProfile(updateProfileBody);
+        Call<BaseResponse<UpdateProfileResponse>> responseCall = apiService.doUpdateProfile(updateProfileBody,
+                SingletonLikeApp.getInstance().getSharedPreferences(mContext).getToken());
         responseCall.enqueue(new Callback<BaseResponse<UpdateProfileResponse>>() {
             @Override
             public void onResponse(@NonNull Call<BaseResponse<UpdateProfileResponse>> call,

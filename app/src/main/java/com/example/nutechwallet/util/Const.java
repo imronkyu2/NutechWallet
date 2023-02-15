@@ -3,6 +3,8 @@ package com.example.nutechwallet.util;
 public class Const {
     public static final class ResponseCodes {
         public static final int SUCCESS = 0;
+        public static final int TOKEN_EXPIRED = 108;
+
     }
 
     public static final class Preferences{

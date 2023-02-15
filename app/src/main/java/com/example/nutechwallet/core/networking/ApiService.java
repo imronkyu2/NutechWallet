@@ -10,6 +10,7 @@ import com.example.nutechwallet.model.updateprofile.UpdateProfileResponse;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.Header;
 import retrofit2.http.POST;
 
 public interface ApiService {
@@ -21,5 +22,5 @@ public interface ApiService {
     Call<BaseResponse<LoginResponse>> doLogin(@Body LoginBody loginBody);
 
     @POST("updateProfile")
-    Call<BaseResponse<UpdateProfileResponse>> doUpdateProfile(@Body UpdateProfileBody updateProfileBody);
+    Call<BaseResponse<UpdateProfileResponse>> doUpdateProfile(@Body UpdateProfileBody updateProfileBody, @Header("Authorization") String authHeader);
 }

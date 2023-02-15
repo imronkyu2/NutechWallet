@@ -39,7 +39,7 @@ public class RetrofitHttpsCall {
         httpClientHttpsCall.addInterceptor(chain -> {
             Request originalHttpsCall = chain.request();
             Request.Builder requestBuilder = originalHttpsCall.newBuilder()
-                    .header("Cache-Control", "no-cache"); // <-- this is the important line
+                    .header("Authorization", "Bearer"); // <-- this is the important line
             Request requestHttpsCall = requestBuilder.build();
             return chain.proceed(requestHttpsCall);
         });
