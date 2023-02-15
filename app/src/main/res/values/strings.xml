@@ -24,4 +24,5 @@
     <string name="email_not_may_kosong">Email tidak boleh kosong</string>
     <string name="first_name_not_may_kosong">Nama depan tidak boleh kosong</string>
     <string name="passwords_dont_match">Password dan Konfirmasi kata sandi tidak sama</string>
+    <string name="email_and_password_have_not_been_filled_in">Email dan Password belum di isi</string>
 </resources>

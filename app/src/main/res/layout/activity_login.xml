@@ -46,25 +46,17 @@
         android:layout_centerInParent="true"
         tools:ignore="Autofill" />
 
-    <TextView
-        android:id="@+id/warningPasswordTV"
-        android:layout_below="@+id/et_password"
-        style="@style/errorTV"
-        android:text="@string/password_not_allowed"
-        android:visibility="visible"
-        tools:ignore="InefficientWeight" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_login"
-        android:layout_below="@+id/et_password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/et_password"
         android:layout_marginTop="50dp"
         android:background="@drawable/btn_custom"
         android:text="@string/login"
-        android:textSize="17sp"
         android:textAllCaps="false"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="17sp" />
 
     <TextView
         android:id="@+id/registerTV"

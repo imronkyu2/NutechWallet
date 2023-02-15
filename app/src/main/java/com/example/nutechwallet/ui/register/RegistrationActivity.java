@@ -16,9 +16,9 @@ import com.example.nutechwallet.R;
 import com.example.nutechwallet.databinding.ActivityRegistrationBinding;
 import com.example.nutechwallet.databinding.IncludeInputPasswordRegisterBinding;
 import com.example.nutechwallet.databinding.IncludeInputProfileRegisterBinding;
-import com.example.nutechwallet.model.NutechResponse;
+import com.example.nutechwallet.model.BaseResponse;
 import com.example.nutechwallet.model.register.UserBody;
-import com.example.nutechwallet.model.register.UserRegistered;
+import com.example.nutechwallet.model.register.UserResponse;
 import com.example.nutechwallet.ui.login.LoginActivity;
 import com.example.nutechwallet.ui.register.contract.RegistrationPresenterContract;
 import com.example.nutechwallet.ui.register.contract.RegistrationViewContract;
@@ -227,7 +227,7 @@ public class RegistrationActivity extends AppCompatActivity implements Registrat
     }
 
     @Override
-    public void doRegisterSuccessfully(NutechResponse<UserRegistered> userRegistered) {
+    public void doRegisterSuccessfully(BaseResponse<UserResponse> userRegistered) {
         Toast.makeText(this, userRegistered.getMessage(), Toast.LENGTH_LONG).show();
         Intent intent = new Intent(RegistrationActivity.this, LoginActivity.class);
         startActivity(intent);

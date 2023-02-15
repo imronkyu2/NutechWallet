@@ -1,9 +1,9 @@
 package com.example.nutechwallet.ui.register;
 
 import com.example.nutechwallet.core.repo.Repo;
-import com.example.nutechwallet.model.NutechResponse;
+import com.example.nutechwallet.model.BaseResponse;
 import com.example.nutechwallet.model.register.UserBody;
-import com.example.nutechwallet.model.register.UserRegistered;
+import com.example.nutechwallet.model.register.UserResponse;
 import com.example.nutechwallet.ui.register.contract.RegistrationPresenterContract;
 import com.example.nutechwallet.ui.register.contract.RegistrationViewContract;
 import com.example.nutechwallet.util.mvp.PostCallback;
@@ -26,7 +26,7 @@ public class RegistrationPresenter implements RegistrationPresenterContract {
         repo.doRegistration(userBody, new PostCallback() {
             @Override
             public void onEntityPosted(Object object) {
-                viewContract.doRegisterSuccessfully((NutechResponse<UserRegistered>) object);
+                viewContract.doRegisterSuccessfully((BaseResponse<UserResponse>) object);
                 viewContract.hideContentLoading();
             }
 

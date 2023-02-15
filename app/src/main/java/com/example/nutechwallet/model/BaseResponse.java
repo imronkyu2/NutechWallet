@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class NutechResponse<T> {
+public class BaseResponse<T> {
 
     @JsonProperty("status")
     private int status;
@@ -15,7 +15,7 @@ public class NutechResponse<T> {
     @JsonProperty("data")
     private T data;
 
-    public NutechResponse() {
+    public BaseResponse() {
     }
 
     public T getData() {

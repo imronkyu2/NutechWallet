@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class UserRegistered {
+public class UserResponse {
 
 	@JsonProperty("last_name")
 	private String lastName;
@@ -16,7 +16,7 @@ public class UserRegistered {
 	@JsonProperty("email")
 	private String email;
 
-	public UserRegistered(){
+	public UserResponse(){
 
 	}
 
